@@ -9,7 +9,10 @@ public class FileSearcherWithCancellation : FileSearcher
         foreach (var file in Directory.EnumerateFiles(directory, filenamePattern))
         {
             FileArgs args = RaiseFileFound(file);
-            if(args.CancelSearch) { break; }
+            if(args.CancelSearch)
+            {
+                break;
+            }
         }
     }
 
@@ -19,5 +22,4 @@ public class FileSearcherWithCancellation : FileSearcher
         FileFound?.Invoke(this, args);
         return args;
     }
-
 }

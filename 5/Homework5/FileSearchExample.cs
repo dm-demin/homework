@@ -30,5 +30,4 @@ public class FileSearchExample
     {
         _fileSearcher.FileFound += onFileFound;
     }
-
 }

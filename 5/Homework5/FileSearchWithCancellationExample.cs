@@ -19,5 +19,4 @@ public class FileSearchWithCancellationExample : FileSearchExample
     {
         _fileSearcher.FileFound += onFileFound;
     }
-
 }

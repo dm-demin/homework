@@ -2,14 +2,14 @@ namespace Homework5.Models;
 
 public class SomeType
 {
-    public string name { get; }
-    public float weight { get; }
+    public string Name { get; }
+    public float Weight { get; }
 
     public SomeType(string name, float weight)
     {
-        this.name = name;
-        this.weight = weight;
+        Name = name;
+        Weight = weight;
     }
 
-    public override string ToString() => name;
+    public override string ToString() => Name;
 }

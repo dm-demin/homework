@@ -6,6 +6,6 @@ public static class SomeTypeToFloat
 {
     public static float GetFloat(SomeType item)
     {
-        return item.weight;
+        return item.Weight;
     }
 }

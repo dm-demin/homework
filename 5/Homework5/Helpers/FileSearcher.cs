@@ -16,5 +16,4 @@ public class FileSearcher
 
     protected virtual void RaiseFileFound(string file) => 
         FileFound?.Invoke(this, new FileArgs(file));
-
 }

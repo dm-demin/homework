@@ -3,9 +3,8 @@ using Homework5.Helpers;
 
 MaxItemExample.Run();
 
-FileSearchExample fileSearcher = new(new FileSearcher(), "..\\..\\..\\Data\\SearchDir", "*.txt");
+var fileSearcher = new FileSearchExample (new FileSearcher(), "..\\..\\..\\Data\\SearchDir", "*.txt");
 fileSearcher.Run();
 
-FileSearchWithCancellationExample firstFileSearcher = new(new FileSearcherWithCancellation(), "..\\..\\..\\Data\\SearchDir", "*.txt");
+var firstFileSearcher = new FileSearchWithCancellationExample(new FileSearcherWithCancellation(), "..\\..\\..\\Data\\SearchDir", "*.*");
 firstFileSearcher.Run();
-
