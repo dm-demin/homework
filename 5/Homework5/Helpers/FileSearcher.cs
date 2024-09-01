@@ -8,7 +8,7 @@ public class FileSearcher
 
     public virtual void Search(string directory, string filenamePattern)
     {
-        foreach (var file in Directory.EnumerateFiles(directory, filenamePattern))
+        foreach (var file in Directory.EnumerateFiles(directory, filenamePattern).Select(Path.GetFileName))
         {
             RaiseFileFound(file);
         }

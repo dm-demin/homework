@@ -6,9 +6,9 @@ public class FileSearcherWithCancellation : FileSearcher
 {
     public override void Search(string directory, string filenamePattern)
     {
-        foreach (var file in Directory.EnumerateFiles(directory, filenamePattern))
+        foreach (var file in Directory.EnumerateFiles(directory, filenamePattern).Select(Path.GetFileName))
         {
-            FileArgs args = RaiseFileFound(file);
+            var args = RaiseFileFound(file);
             if(args.CancelSearch)
             {
                 break;
@@ -18,7 +18,7 @@ public class FileSearcherWithCancellation : FileSearcher
 
     private new FileArgs RaiseFileFound(string file)
     {
-        FileArgs args = new(file);
+        var args = new FileArgs(file);
         FileFound?.Invoke(this, args);
         return args;
     }
