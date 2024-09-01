@@ -1,5 +1,3 @@
-using Homework5.Models;
-using Homework5.Helpers;
 using CollectionMaxItem;
 
 namespace Homework5;
@@ -9,14 +7,14 @@ public static class MaxItemExample
     public static void Run()
     {
         // Создадим коллекцию и найдем максимальный элемент:
-        var someList = new List<SomeType>() {
-            new(name: "one", weight: 1f),
-            new(name: "two", weight: 2f),
-            new(name: "two-and-half", weight: 2.5f),
-            new(name: "one-and-half", weight: 1.5f)
+        var someList = new List<string>() {
+            "1,5",
+            "1",
+            "2,5",
+            "1"
         };
 
-        var maxItem = CollectionItemHelper.GetMax<SomeType>(someList, SomeTypeToFloat.GetFloat);
+        var maxItem = someList.GetMax<string>(str=>float.Parse(str));
         Console.WriteLine("Max items in collections is " + maxItem);
     }
 }
