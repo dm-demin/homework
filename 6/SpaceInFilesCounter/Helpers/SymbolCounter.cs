@@ -3,7 +3,7 @@ namespace SpaceInFiles.Helpers;
 /// <summary>
 /// Static class for space count calculation.
 /// </summary>
-public static class SpaceCounter
+public static class SymbolCounter
 {
     /// <summary>
     /// Method return count of some symbol in file.  

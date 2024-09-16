@@ -37,7 +37,7 @@ public static class CountSpaceInFiles
     {
         var stopwatch = Stopwatch.StartNew();
 
-        var tasks = filePaths.Select(file => SpaceCounter.Count(file)).ToList();
+        var tasks = filePaths.Select(file => SymbolCounter.Count(file)).ToList();
         var resultTasks = await Task.WhenAll(tasks);
 
         stopwatch.Stop();
