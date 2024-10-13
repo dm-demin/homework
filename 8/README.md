@@ -11,7 +11,7 @@
 - Добавить к каждому классу реализацию стандартного интерфейса ICloneable и реализовать его функционал через уже созданные методы
 
 ## Результаты
-
+Описание структуры классов - [тут](./Resources/README.md)
 
 ## Ссылки
 - https://refactoringguru.cn/ru/design-patterns/prototype/csharp/example
