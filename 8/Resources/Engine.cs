@@ -32,4 +32,18 @@ public sealed class Engine : AggregateResource
 
         return false;
     }
+
+    public override Engine MyClone()
+    {
+        var clone = new Engine();
+        clone.State = ResourceState.Available;
+        
+        foreach(var resource in resources)
+        {
+            clone.AddResource(resource.MyClone());
+        }
+
+        clone.technicians = technicians;
+        return clone;
+    }
 }

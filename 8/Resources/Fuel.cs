@@ -9,6 +9,16 @@ public sealed class Fuel : MaterialResource
         var fuel = new Fuel();
         fuel.MaxQty = 100;
         fuel.CurrentQty = 100;
+        fuel.Consumption = 5;
         return fuel;
+    }
+
+    public override Fuel MyClone()
+    {
+        var clone = new Fuel();
+        clone.MaxQty = MaxQty;
+        clone.Consumption = Consumption;
+        clone.CurrentQty = MaxQty;
+        return clone;
     }
 }

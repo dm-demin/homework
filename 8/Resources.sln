@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{088DCAB6-13B4-406F-87CC-633BF8244013}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesTest", "ResourcesTest\ResourcesTest.csproj", "{549C4854-A5A8-4824-8C6B-B84E8681DC7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{088DCAB6-13B4-406F-87CC-633BF8244013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088DCAB6-13B4-406F-87CC-633BF8244013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088DCAB6-13B4-406F-87CC-633BF8244013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088DCAB6-13B4-406F-87CC-633BF8244013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549C4854-A5A8-4824-8C6B-B84E8681DC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549C4854-A5A8-4824-8C6B-B84E8681DC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549C4854-A5A8-4824-8C6B-B84E8681DC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549C4854-A5A8-4824-8C6B-B84E8681DC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,6 +1,8 @@
-﻿namespace Resources.Abstractions;
+﻿using Resources.Interfaces;
 
-public abstract class BaseResource
+namespace Resources.Abstractions;
+
+public abstract class BaseResource : IMyClonable<BaseResource>
 {
     public ResourceState State { get; protected set; }
 
@@ -8,4 +10,6 @@ public abstract class BaseResource
     {
         throw new NotImplementedException();
     }
+
+    public abstract BaseResource MyClone();
 }

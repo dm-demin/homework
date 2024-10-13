@@ -53,4 +53,10 @@ public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumabl
         qualifications.Add(aggregate);
         return this;
     }
+
+    public override PersonnelResource MyClone()
+    {
+        // Это не этично, в обществе еще не утихли споры о клонировании:
+        throw new NotImplementedException();
+    }
 }

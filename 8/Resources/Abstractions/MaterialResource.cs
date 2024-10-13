@@ -20,4 +20,6 @@ public abstract class MaterialResource : BaseResource, IConsumable
         CurrentQty -= Consumption;
         return true;
     }
+
+    public abstract override MaterialResource MyClone();
 }

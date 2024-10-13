@@ -5,7 +5,7 @@ namespace Resources.Abstractions;
 
 public abstract class AggregateResource : BaseResource, IRepairable, IBreakable
 {
-    protected List<IConsumable> resources;
+    protected List<MaterialResource> resources;
     protected List<PersonnelResource> technicians;
 
     protected AggregateResource()

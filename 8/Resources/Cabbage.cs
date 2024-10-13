@@ -12,4 +12,13 @@ public sealed class Cabbage : MaterialResource
         resource.CurrentQty = 10;
         return resource;
     }
+
+    public override Cabbage MyClone()
+    {
+        var clone = new Cabbage();
+        clone.MaxQty = MaxQty;
+        clone.Consumption = Consumption;
+        clone.CurrentQty = MaxQty;
+        return clone;
+    }
 }
