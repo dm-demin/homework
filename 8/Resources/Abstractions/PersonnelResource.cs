@@ -2,7 +2,7 @@ using Resources.Interfaces;
 
 namespace Resources.Abstractions;
 
-public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumable
+public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumable, ICloneable
 {
     protected List<IConsumable> resources;
     protected List<IRepairable> qualifications;
@@ -58,5 +58,10 @@ public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumabl
     {
         // Это не этично, в обществе еще не утихли споры о клонировании:
         throw new NotImplementedException();
+    }
+
+    public object Clone()
+    {
+        return MyClone();
     }
 }

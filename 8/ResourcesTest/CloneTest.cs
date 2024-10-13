@@ -2,7 +2,7 @@ using Resources;
 
 namespace ResourcesTest;
 
-public class MyCloneTest
+public class CloneTest
 {
     [SetUp]
     public void Setup()
@@ -15,7 +15,7 @@ public class MyCloneTest
         var original = Fuel.Create();
         original.Consume();
 
-        var clone = original.MyClone();
+        var clone = (Fuel)original.Clone();
         
         Assert.That(clone.CurrentQty, Is.Not.EqualTo(original.CurrentQty));
     }
@@ -24,7 +24,7 @@ public class MyCloneTest
     public void PersonnelResourceCloneTest_Fail()
     {
         var original = Engineer.Create();        
-        Assert.Throws<NotImplementedException>( () => {original.MyClone();});
+        Assert.Throws<NotImplementedException>( () => {original.Clone();});
     }
 
     [Test]
@@ -33,7 +33,7 @@ public class MyCloneTest
         var original = Engine.Create();
         original.AddTechnician(Engineer.Create());
 
-        var clone = original.MyClone();
+        var clone = (Engine)original.Clone();
         Assert.That(clone, Is.Not.EqualTo(original));
 
         clone.Fail();

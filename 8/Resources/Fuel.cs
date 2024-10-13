@@ -2,7 +2,7 @@ using Resources.Abstractions;
 
 namespace Resources;
 
-public sealed class Fuel : MaterialResource
+public sealed class Fuel : MaterialResource, ICloneable
 {
     public static new Fuel Create()
     {
@@ -20,5 +20,10 @@ public sealed class Fuel : MaterialResource
         clone.Consumption = Consumption;
         clone.CurrentQty = MaxQty;
         return clone;
+    }
+
+    public object Clone()
+    {
+        return MyClone();
     }
 }

@@ -2,7 +2,7 @@ using Resources.Abstractions;
 
 namespace Resources;
 
-public sealed class Engine : AggregateResource
+public sealed class Engine : AggregateResource, ICloneable
 {
     private Engine() : base()
     {
@@ -45,5 +45,10 @@ public sealed class Engine : AggregateResource
 
         clone.technicians = technicians;
         return clone;
+    }
+
+    public object Clone()
+    {
+        return MyClone();
     }
 }
