@@ -14,5 +14,5 @@
 
 
 ## Ссылки
-https://refactoringguru.cn/ru/design-patterns/prototype/csharp/example
-https://learn.microsoft.com/ru-ru/dotnet/api/system.icloneable?view=net-8.0
+- https://refactoringguru.cn/ru/design-patterns/prototype/csharp/example
+- https://learn.microsoft.com/ru-ru/dotnet/api/system.icloneable?view=net-8.0
