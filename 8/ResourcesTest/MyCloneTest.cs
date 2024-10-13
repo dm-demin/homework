@@ -16,15 +16,15 @@ public class MyCloneTest
         original.Consume();
 
         var clone = original.MyClone();
-        
+
         Assert.That(clone.CurrentQty, Is.Not.EqualTo(original.CurrentQty));
     }
 
     [Test]
     public void PersonnelResourceCloneTest_Fail()
     {
-        var original = Engineer.Create();        
-        Assert.Throws<NotImplementedException>( () => {original.MyClone();});
+        var original = Engineer.Create();
+        Assert.Throws<NotImplementedException>(() => { original.MyClone(); });
     }
 
     [Test]

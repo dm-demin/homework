@@ -20,8 +20,7 @@ public sealed class Engineer : PersonnelResource
         {
             engineer.AddQualification(aggregate);
         }
-        
+
         return engineer;
     }
-
 }

@@ -4,9 +4,8 @@ namespace Resources.Abstractions;
 
 public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumable, ICloneable
 {
-    protected List<IConsumable> resources;
-    protected List<IRepairable> qualifications;
-
+    private List<IConsumable> resources;
+    private List<IRepairable> qualifications;
     protected PersonnelResource()
     {
         resources = [];
@@ -14,10 +13,13 @@ public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumabl
         State = ResourceState.Suspend;
     }
 
+    protected List<IConsumable> Resources { get => resources; set => resources = value; }
+    protected List<IRepairable> Qualifications { get => qualifications; set => qualifications = value; }
+
     public bool Consume()
     {
         if (State == ResourceState.Suspend)
-        {   
+        {
             return true;
         }
 
@@ -39,7 +41,7 @@ public abstract class PersonnelResource : BaseResource, IQualifiable, IConsumabl
             return true;
         }
 
-       return false;
+        return false;
     }
 
     public PersonnelResource AddResources(IConsumable resource)

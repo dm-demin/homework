@@ -4,7 +4,8 @@ namespace Resources;
 
 public sealed class Engine : AggregateResource, ICloneable
 {
-    private Engine() : base()
+    private Engine()
+        : base()
     {
         State = ResourceState.Created;
     }
@@ -24,7 +25,7 @@ public sealed class Engine : AggregateResource, ICloneable
             return true;
         }
 
-        if (technicians.Where(x => x.State == ResourceState.Available).Any())
+        if (_technicians.Where(x => x.State == ResourceState.Available).Any())
         {
             State = ResourceState.Available;
             return true;
@@ -37,13 +38,13 @@ public sealed class Engine : AggregateResource, ICloneable
     {
         var clone = new Engine();
         clone.State = ResourceState.Available;
-        
-        foreach(var resource in resources)
+
+        foreach (var resource in _resources)
         {
             clone.AddResource(resource.MyClone());
         }
 
-        clone.technicians = technicians;
+        clone._technicians = _technicians;
         return clone;
     }
 
